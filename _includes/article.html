@@ -5,6 +5,7 @@
     {% else %}
       <h1 class="entry-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
     {% endif %}
+    {% include post/from_source.html %}
     {% unless page.meta == false %}
       <p class="meta">
         {% include post/date.html %}{{ time }}

@@ -8,8 +8,12 @@ footer: true
 ---
 ### Welcome to Chicken's Blog
 
-I'm realy a Chicken. I'm writing what I learn, so welcome any comments.
+We are realy a Chicken. just writing what we learnt, we worked
 
-Contact with me via
+Welcome any `comments`.
 
-* Email: [code.for.food.14@gmail.com](code.for.food.14@gmail.com)
+Contact with us via
+
+* [code.for.food.14@gmail.com](code.for.food.14@gmail.com)
+* [nguyenxuantruongit@gmail.com](nguyenxuantruongit@gmail.com)
+* TODO: add more members.

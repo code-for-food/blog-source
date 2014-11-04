@@ -1,0 +1,28 @@
+{% if post.source_name %}
+  {% assign source_name = post.source_name %}
+{% elsif page.source_name %}
+  {% assign source_name = page.source_name %}
+{% else %}
+  {% assign source_name = site.source_name %}
+{% endif %}
+
+{% if post.source_site %}
+  {% assign source_site = post.source_site %}
+{% elsif page.source_site %}
+  {% assign source_site = page.source_site %}
+{% else %}
+  {% assign source_site = site.source_site %}
+{% endif %}
+
+{% if source_name %}<span class="byline author vcard"> * source: <span class="fn">
+
+{% if source_site %}
+
+	<a href="{{source_site}}">{{ source_name }}</a>
+	
+{% else %}
+
+	{{ source_name }}
+
+{% endif %}
+</span></span>{% endif %}
