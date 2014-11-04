@@ -3,6 +3,8 @@ layout: post
 title: "CORS on Apache"
 date: 2014-11-04 08:32:41 +0700
 comments: true
+author: codeforfoods
+author_site: http://codeforfoods.net/about-me
 categories: [apache, crors-domain]
 ---
 
