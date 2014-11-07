@@ -7,6 +7,7 @@ author: codeforfoods
 author_site: http://codeforfoods.net/about-me
 source_name: Internet
 source_site: https://www.facebook.com/ArchiDesiign/posts/414950071993587
+fb_img: https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xap1/t31.0-8/s960x960/10750009_414949625326965_7306927192227304603_o.jpg
 categories: [relax, magazine]
 ---
 While a leader can be a boss, not every boss is a leader. Although leaders and
