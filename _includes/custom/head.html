@@ -11,6 +11,8 @@
   {% assign fb_img = site.fb_img %}
 {% endif %}
 {% if fb_img %}
+<meta property="fb:app_id" content="{{site.facebook_app_id}}">
+<meta property="fb:admins" content="e07c912da747a77dbbbcd27b351a10df">
 <meta property="og:url" value="{{ site.url }}{{ page.url }}">
 <meta property="og:type" content="website" />
 {% if page.title %}
