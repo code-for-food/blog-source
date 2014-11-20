@@ -3,7 +3,6 @@
   <ul id="recent_posts">
     {% for post in site.posts limit: site.recent_posts %}
       <li class="post">
-      	<img src="{{ post.fb_img }}" width="50px" height="50px">
         <a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a>
       </li>
     {% endfor %}
