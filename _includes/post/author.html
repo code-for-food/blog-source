@@ -20,10 +20,10 @@
 
 {% if author_site %}
 
-	<a href="{{author_site}}">{{ author }}</a>
+	<a href="{{author_site}}">{{ author | author_links }}</a>
 {% else %}
 
-	{{ author }}
+	{{ author | author_links }}
 
 {% endif %}
 </span></span>{% endif %}

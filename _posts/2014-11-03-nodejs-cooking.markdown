@@ -3,6 +3,7 @@ layout: post
 title: "Nodejs cooking"
 date: 2014-11-03 09:47:33 +0700
 comments: true
+author: codeforfoods
 categories: [chef, cooking, nodejs]
 ---
 

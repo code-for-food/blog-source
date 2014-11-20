@@ -3,6 +3,7 @@ layout: post
 title: "How to Switch Careers"
 date: 2014-11-06 11:12:00 +0700
 comments: true
+author: codeforfoods
 source_name: wikihow
 source_site: http://www.wikihow.com/Switch-Careers
 fb_img: http://www.wikihow.com/images/2/25/Switch-Careers-Step-1.jpg

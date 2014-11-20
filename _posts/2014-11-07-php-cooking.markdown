@@ -3,6 +3,7 @@ layout: post
 title: "php-cooking"
 date: 2014-11-07 11:03:51 +0700
 comments: true
+author: codeforfoods
 fb_img: https://lh6.googleusercontent.com/-yoM7_7UiHBY/VFxCYAUZpJI/AAAAAAAAABs/xbd3d4fabn8/s184/README_md_-__Users_congdang_my-training_codeforfoods_php-cooking_-_Atom.png
 categories: [chef, cooking, php]
 ---

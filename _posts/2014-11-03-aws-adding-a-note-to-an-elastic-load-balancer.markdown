@@ -3,6 +3,7 @@ layout: post
 title: "[aws] - Adding a Ec2 node to an Elastic Load Balancer"
 date: 2014-11-03 21:42:35 +0700
 comments: true
+author: codeforfoods
 categories: [bash, aws, elb]
 ---
 

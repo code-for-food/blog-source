@@ -3,6 +3,7 @@ layout: post
 title: "Command-line JSON processor"
 date: 2014-11-03 11:23:05 +0700
 comments: true
+author: codeforfoods
 categories: [bash, json]
 ---
 
