@@ -90,6 +90,6 @@ objects[1] += 2        # same as: objects[1] = objects[1] + 2
 objects[1] ||= 2       # same as: objects[1]? || (objects[1] = 2)
 objects[1] &&= 2       # same as: objects[1]? && (objects[1] = 2)
 ```
-I will present about control expressions in part 2
+I will present about control expressions in part 2.
 Thanks!
 
