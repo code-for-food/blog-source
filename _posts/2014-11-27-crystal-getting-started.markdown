@@ -35,5 +35,5 @@ crystal hello.cr
 ```
 
 That's all! Hope you guys love it :D
-I will have anather post about syntax and semantics :)
+I will have another post about syntax and semantics :)
 Thanks
