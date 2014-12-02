@@ -6,7 +6,7 @@ source_name: rails-protocol
 source_site: https://github.com/thoughtbot/guides/tree/master/protocol/rails
 comments: true
 categories: [rails]
-author: Duy Phan 
+author: chicken-dp
 ---
 
 A guide for writing great web apps.

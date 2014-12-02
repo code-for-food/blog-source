@@ -6,7 +6,7 @@ source_name: viddl-rb
 source_site: https://github.com/rb2k/viddl-rb
 comments: true
 categories: [youtube, rails]
-author: Hau Nguyen 
+author: chicken-hn
 ---
 ###Installation:
 ```

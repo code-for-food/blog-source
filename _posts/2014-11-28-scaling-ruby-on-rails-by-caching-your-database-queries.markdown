@@ -6,7 +6,7 @@ source_name: scaling-ruby-on-rails-by-caching-your-database-queries
 source_site: http://www.codebeerstartups.com/2014/11/scaling-ruby-on-rails-by-caching-your-database-queries/
 comments: true
 categories: [database, rails]
-author: Duy Phan 
+author: chicken-dp 
 ---
 
 This article would help you to scaling your app with caching your database queries.
