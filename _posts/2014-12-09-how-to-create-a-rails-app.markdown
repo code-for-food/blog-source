@@ -1,0 +1,207 @@
+---
+layout: post
+title: "[Rails] How To Create a Rails App"
+date: 2014-12-09 17:14:37 +0700
+comments: true
+source_name: how-to-create-a-rails-app
+source_site: http://www.launchacademy.com/codecabulary/learn-rails/how-to-create-a-rails-app
+comments: true
+categories: [rails]
+author: chicken-dp 
+---
+
+#### How To Create a Rails App
+
+##### A step by step guide to prepare your app.
+
+First there was “rails new Foo” -- the next thing you know you’re adding “group :test, :development do gem ‘rspec-rails’ end” to your Gemfile and editing your database.yml file to reflect the correct localhost IP. While learning Rails for the first time, it’s difficult to remember these various minutiae of setting up your app; moreover, it’s even more difficult to remember which order they should be performed in. This can often mean running into some time consuming errors along the way. Here is a step by step guide I created, and very often use, to make sure I’m not missing any steps in setting up a working Rails app.
+
+#### The 17.5 Steps
+
+##### Step 1
+
+```
+	rails new --database=postgresql OR rails new -T --database=postgresql
+```
+
+At Launch Academy we tend to use postgresql. So to save yourself a little extra work, make sure you include the --database flag when executing rails new.
+
+The -T flag is short for --skip-test-unit (which is helpful since we usually delete the test directory anyway).
+
+
+##### Step 2
+
+```
+	remove turbolinks in Rails 4.x -- for Rails 3.x, make sure you remove the public/index.html
+```
+
+How to remove Turbolinks: 
+
+	⋅⋅* Remove the gem 'turbolinks' line from your Gemfile
+
+	⋅⋅* Remove the //= require turbolinks from your app/assets/javascripts/application.js.
+
+	⋅⋅* Remove the two "data-turbolinks-track" => true hash key/value pairs from your app/views/layouts/application.html.erb.
+
+##### Step 3
+
+```
+	git init
+```
+
+This command sets up your local git repository. You’ll need to do this command first in order to commit your changes later.
+
+##### Step 4
+
+edit config/database.yml
+
+```	
+	host: 127.0.0.1
+```
+
+This file holds some settings for your postgresql database. You will probably want to remove the username on your databases. For my system I also needed to add the line host: 127.0.0.1 to make postgresql work.
+
+##### Step 5
+Gemfile updates
+These are some common gems I’ve used:
+
+```
+	gem ‘twitter-bootstrap-rails’
+	gem ‘simple-form’
+
+   group :test, :development do
+       gem 'rspec-rails'
+       gem 'capybara'
+       gem 'launchy'
+   end
+
+   group :test do
+       gem 'factory_girl_rails'
+     gem ‘shoulda-matchers’
+   end
+
+   group :development do    #access at rails/routes
+       gem 'sextant'
+   end
+```
+
+##### Step 6
+
+```
+	rake db:create
+```
+
+I usually do this before bundle, as I’ve run into some errors otherwise. This command creates a local instance of the postgresql database.
+
+##### Step 7
+
+```
+	bundle install
+```
+
+##### Step 8
+
+```
+	git add * ; git commit -m ‘message’
+```
+
+A good chance to commit those changes! git add * will add all changed files to your commit. When you do git commit -m ‘message’, those changes are then saved to your local git repository. This is useful if you ever need to go back to a stable version of your app. This command will also be very important to Git collaboration.
+
+##### Step 9
+
+```
+	rails g rspec:install (rails g bootstrap:install static)
+```
+
+Install any gem generated scaffolds you may be using. Rspec is a must! Other examples could include bootstrap, or devise.
+
+##### Step 10
+
+```
+	remove ~/test
+```
+
+Remove that ~/test dir once you have Rspec setup. A clean app is a happy app. If you used the -T flag while creating the rails app, you can skip this step.
+
+##### Step 11
+
+add to spec_helper.rb
+
+```
+	#spec_helper.rb
+  require 'capybara/rails'
+  require 'capybara/rspec'
+
+  config.include FactoryGirl::Syntax::Methods
+```
+
+Add this helpful lines to make sure everything works! I like to include the FactoryGirl line as well. That way I don’t have to type FactoryGirl.build, but rather just: build.
+
+##### Step 12
+
+```
+	create factories.rb file in spec/support
+```
+
+You’ll need to create the spec/support directory, where you’ll place a new file that will create your factories.
+
+##### Step 13
+
+```
+	git add * ; git commit -m ‘message’
+```
+
+Commit
+
+##### Step 14
+
+```
+	create models / scaffold / migrations
+```
+
+Time to create any generated code. If you’re not using generated code, you can mostly skip to step 16
+
+##### Step 15
+
+```
+	git add * ; git commit -m ‘message’
+```
+
+Commit before migrating: JUST IN CASE!
+
+##### Step 16
+
+```
+	rake db:migrate ; rake db:rollback ; rake db:migrate
+```
+
+Use this command to double check that your tables / migrations are correctly configured. This is a best practices sort of deal. If you're using zsh, I'd highly recommend making an alias for this command!
+
+##### Step 16.5
+
+```
+	rake db:test:prepare
+```
+
+This command generates the test environment that Rspec uses. You’ll need to redo this command if you make any new migrations.
+
+##### Step 17
+
+```
+	git add * ; git commit -m ‘message’
+```
+
+Don’t forget to commit after you Migrate!
+
+##### Extras: add database.yml and secret_token.rb to your .gitginore
+
+This is just a good habit to get into. When others fork your repos, having special database settings can give them a headache when trying to check out your code. Do them a favor and tell git to ignore that file. Another file to add is the secret_token.rb -- it's called that for a reason! It's supposed to be secret! Protect your users by hiding this file.
+
+In your .gitignore file add the lines:
+
+```
+	/config/database.yml
+	/config/secret_token.rb
+```
+
+###### From here you can do whatever you’d like, and you shouldn’t break your app too much. Have fun!
