@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Rails] Setup Rails 4.1"
+title: "[Rails] Setup Rails 4.1 with Spring, RSpec and Guard"
 date: 2014-12-18 09:37:33 +0700
 comments: true
 source_name: setup-rails-41-spring-rspec-and-guard
@@ -9,8 +9,6 @@ categories: [rails]
 author: chicken-dp 
 
 ---
-
-# How to setup Rails 4.1 with Spring, RSpec and Guard
 
 Rails 4.1 allows us to use [Spring](https://github.com/rails/spring) to run our `rails` and `rake` commands quickly by running your application in the background and avoiding the rails startup time penalty. It took me a little while to find this information, so here is my guide to setting this up.
 
